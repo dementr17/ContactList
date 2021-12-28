@@ -32,12 +32,12 @@ class ContactListViewController: UITableViewController {
         return infoList.count
     }
 
-    var personInfo: Person!
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personName", for: indexPath)
         
-        personInfo = infoList[indexPath.row]
+        let personInfo = infoList[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
         content.text = "\(personInfo.name) \(personInfo.surname)"
@@ -45,6 +45,12 @@ class ContactListViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        //если сработала ячейка по данному индексу (метод который анимационно убирает выделение ячейки)
+        let person = infoList[indexPath.row]
+        performSegue(withIdentifier: "showInfo", sender: person)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -86,7 +92,7 @@ class ContactListViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let infoListVC = segue.destination as? InfoListViewController else { return }
-        infoListVC.infoPersonContact = personInfo
+        infoListVC.infoPersonContact = sender as? Person
     }
 
 

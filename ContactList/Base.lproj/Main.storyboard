@@ -33,9 +33,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="ATm-LM-rch" kind="show" id="xGR-ka-prK"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,6 +41,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Persons List" id="O3p-fp-RJq"/>
+                    <connections>
+                        <segue destination="ATm-LM-rch" kind="show" identifier="showInfo" id="XqR-rf-M2W"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIg-sj-ypL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
