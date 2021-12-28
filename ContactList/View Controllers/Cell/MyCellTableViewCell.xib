@@ -16,41 +16,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="GNA-XZ-kHy">
-                        <rect key="frame" x="20" y="4" width="98" height="36.5"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n9-r5-F3t">
-                                <rect key="frame" x="0.0" y="8" width="41.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWD-8W-TqX">
-                                <rect key="frame" x="56.5" y="8" width="41.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="9n9-r5-F3t" firstAttribute="top" secondItem="GNA-XZ-kHy" secondAttribute="top" constant="8" id="Abv-sc-ZS8"/>
-                            <constraint firstItem="TWD-8W-TqX" firstAttribute="top" secondItem="GNA-XZ-kHy" secondAttribute="top" constant="8" id="vV9-lB-EpR"/>
-                        </constraints>
-                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n9-r5-F3t">
+                        <rect key="frame" x="44" y="0.0" width="268" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWD-8W-TqX">
+                        <rect key="frame" x="0.0" y="0.0" width="36" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="TWD-8W-TqX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hPk-Bf-CHO"/>
-                    <constraint firstItem="GNA-XZ-kHy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="im8-Ae-qlz"/>
-                    <constraint firstItem="GNA-XZ-kHy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oqM-5C-Mfu"/>
-                    <constraint firstItem="9n9-r5-F3t" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="u82-Dz-t5j"/>
-                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imageLabel" destination="9n9-r5-F3t" id="Flb-5D-xQq"/>
-                <outlet property="txtLabel" destination="TWD-8W-TqX" id="8iR-1L-90O"/>
+                <outlet property="imageLabel" destination="TWD-8W-TqX" id="Z5y-7i-GM0"/>
+                <outlet property="txtLabel" destination="9n9-r5-F3t" id="swT-yG-mTY"/>
             </connections>
-            <point key="canvasLocation" x="139" y="76"/>
+            <point key="canvasLocation" x="137.68115942028987" y="75"/>
         </tableViewCell>
     </objects>
 </document>

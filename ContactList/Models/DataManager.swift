@@ -12,26 +12,26 @@ class DataManager {
     
     let  names = [
         "Dmitriy", "Sergey", "Aleksey",
-        "Ivan", "Mihail", "Aleksandr",
+        "Stas", "Evgeniy", "Aleksandr",
         "Anton", "Yuriy", "Ilya"
     ]
     
     let surnames = [
         "Chepanov", "Ivanov", "Petrov",
-        "Kozlov", "Kobzev", "Egorov",
-        "Sidorov", "Polyakov", "Dmitriev"
+        "Kozlov", "Shuvaev", "Vihlyaev",
+        "Volostnah", "Polyakov", "Shevchenko"
     ]
     
     let emails = [
-        "dc@mail.ru", "iv@mail.ru", "eg@mail.ru",
-        "ks@mail.ru", "tr@mail.ru", "ov@mail.ru",
-        "ss@mail.ru", "ch@mail.ru", "bk@mail.ru"
+        "dim_chp@mail.ru", "ivanov@mail.ru", "a_shuk@mail.ru",
+        "dementr@mail.ru", "ksv@mail.ru", "oddis@mail.ru",
+        "ssep@mail.ru", "chp@mail.ru", "bk_ak@mail.ru"
     ]
     
     let phones = [
-        "112233", "222223", "451234",
-        "777777", "129403", "130348",
-        "234249", "758362", "120475"
+        "8 475 112 2433", "8 915 222 2323", "8 910 451 2734",
+        "8 920 777 7777", "8 915 129 4303", " 8 910 345 0348",
+        "8 953 234 2149", "8 475 2 582 362", "8 920 512 0475"
     ]
     private init() {}
 }
