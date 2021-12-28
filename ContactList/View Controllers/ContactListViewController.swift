@@ -7,32 +7,30 @@
 
 import UIKit
 
-class ContactListViewController: UITableViewController {
+class ContactListViewController: UITableViewController, UITabBarControllerDelegate {
 
-    private var infoList = Person.getContactList()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//    var infoList: [Person]!
+    var infoList: [Person] = [] {
+        didSet {
+            tableView.reloadData()
+        }
     }
 
-    // MARK: - Table view data source
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        guard let tabBarController = self.tabBarController else { return }
+        
+        tabBarController.delegate = self
+        getPersones()
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
+    }
+    
+    // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return infoList.count
     }
-
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personName", for: indexPath)
@@ -47,53 +45,26 @@ class ContactListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //если сработала ячейка по данному индексу (метод который анимационно убирает выделение ячейки)
+        
         let person = infoList[indexPath.row]
         performSegue(withIdentifier: "showInfo", sender: person)
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let infoListVC = segue.destination as? InfoListViewController else { return }
         infoListVC.infoPersonContact = sender as? Person
+        guard let listPersonVC = segue.destination as? ListPersonViewController else { return }
+        listPersonVC.persons = infoList
     }
 
+    private func getPersones() {
+        guard
+            let dataSource = tabBarController as? ModelDataSource
+        else { return }
+        
+        self.infoList = dataSource.persons
+    }
 
 }

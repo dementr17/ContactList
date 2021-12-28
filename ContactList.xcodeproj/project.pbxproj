@@ -17,6 +17,9 @@
 		5F6E6C44277ADD2500624DF4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6E6C43277ADD2500624DF4 /* Person.swift */; };
 		5F6E6C4A277B144D00624DF4 /* InfoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6E6C49277B144D00624DF4 /* InfoListViewController.swift */; };
 		5F6E6C53277B377C00624DF4 /* ListPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6E6C52277B377C00624DF4 /* ListPersonViewController.swift */; };
+		5F6E6C5A277B45D100624DF4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6E6C59277B45D100624DF4 /* TabBarViewController.swift */; };
+		5F6E6C5E277B7B8400624DF4 /* MyCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6E6C5C277B7B8400624DF4 /* MyCellTableViewCell.swift */; };
+		5F6E6C5F277B7B8400624DF4 /* MyCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F6E6C5D277B7B8400624DF4 /* MyCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		5F6E6C43277ADD2500624DF4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5F6E6C49277B144D00624DF4 /* InfoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListViewController.swift; sourceTree = "<group>"; };
 		5F6E6C52277B377C00624DF4 /* ListPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPersonViewController.swift; sourceTree = "<group>"; };
+		5F6E6C59277B45D100624DF4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5F6E6C5C277B7B8400624DF4 /* MyCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellTableViewCell.swift; sourceTree = "<group>"; };
+		5F6E6C5D277B7B8400624DF4 /* MyCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +118,22 @@
 		5F6E6C58277B385100624DF4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5F6E6C52277B377C00624DF4 /* ListPersonViewController.swift */,
+				5F6E6C5B277B7B6200624DF4 /* Cell */,
 				5F6E6C41277A616900624DF4 /* ContactListViewController.swift */,
+				5F6E6C52277B377C00624DF4 /* ListPersonViewController.swift */,
 				5F6E6C49277B144D00624DF4 /* InfoListViewController.swift */,
+				5F6E6C59277B45D100624DF4 /* TabBarViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5F6E6C5B277B7B6200624DF4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5F6E6C5C277B7B8400624DF4 /* MyCellTableViewCell.swift */,
+				5F6E6C5D277B7B8400624DF4 /* MyCellTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F6E6C36277A5DAC00624DF4 /* LaunchScreen.storyboard in Resources */,
+				5F6E6C5F277B7B8400624DF4 /* MyCellTableViewCell.xib in Resources */,
 				5F6E6C33277A5DAC00624DF4 /* Assets.xcassets in Resources */,
 				5F6E6C31277A5DA800624DF4 /* Main.storyboard in Resources */,
 			);
@@ -190,11 +208,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F6E6C5A277B45D100624DF4 /* TabBarViewController.swift in Sources */,
 				5F6E6C44277ADD2500624DF4 /* Person.swift in Sources */,
 				5F6E6C4A277B144D00624DF4 /* InfoListViewController.swift in Sources */,
 				5F6E6C53277B377C00624DF4 /* ListPersonViewController.swift in Sources */,
 				5F6E6C42277A616900624DF4 /* ContactListViewController.swift in Sources */,
 				5F6E6C3E277A5E5200624DF4 /* DataManager.swift in Sources */,
+				5F6E6C5E277B7B8400624DF4 /* MyCellTableViewCell.swift in Sources */,
 				5F6E6C2A277A5DA800624DF4 /* AppDelegate.swift in Sources */,
 				5F6E6C2C277A5DA800624DF4 /* SceneDelegate.swift in Sources */,
 			);

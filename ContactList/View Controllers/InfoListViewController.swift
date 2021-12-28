@@ -16,12 +16,15 @@ class InfoListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailPerson.text = infoPersonContact.email
-        numberPerson.text = infoPersonContact.phones
+        emailPerson.text = "📧" + infoPersonContact.email
+        numberPerson.text = "📞" + infoPersonContact.phone
     }
     
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        title = infoPersonContact.name + " " + infoPersonContact.surname
+    }
     
 
 }

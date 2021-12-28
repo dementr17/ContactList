@@ -12,11 +12,11 @@ struct Person {
     let name: String
     let surname: String
     let email: String
-    let phones: String
+    let phone: String
     
     static func getContactList() -> [Person] {
 
-        var person: [Person] = []
+        var persons: [Person] = []
         
         var namesPerson = DataManager.shared.names
         var surNamesPerson = DataManager.shared.surnames
@@ -46,10 +46,10 @@ struct Person {
                 phonePerson = phonesPerson[indexPhone]
                 phonesPerson.remove(at: indexPhone)
 
-            let personPerson = Person(name: namePerson, surname: surNamePerson, email: emailPerson, phones: phonePerson)
-            person.append(personPerson)
+            let personPerson = Person(name: namePerson, surname: surNamePerson, email: emailPerson, phone: phonePerson)
+            persons.append(personPerson)
         }
         
-        return person
+        return persons
     }
 }
