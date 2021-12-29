@@ -9,13 +9,20 @@ import UIKit
 
 class ContactListViewController: UITableViewController, UITabBarControllerDelegate {
 
-//    var infoList: [Person]!
     var infoList: [Person] = [] {
         didSet {
             tableView.reloadData()
         }
     }
 
+    private func getPersones() {
+        guard
+            let dataSource = tabBarController as? ModelDataSource
+        else { return }
+        
+        self.infoList = dataSource.persons
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,13 +65,4 @@ class ContactListViewController: UITableViewController, UITabBarControllerDelega
         guard let listPersonVC = segue.destination as? ListPersonViewController else { return }
         listPersonVC.persons = infoList
     }
-
-    private func getPersones() {
-        guard
-            let dataSource = tabBarController as? ModelDataSource
-        else { return }
-        
-        self.infoList = dataSource.persons
-    }
-
 }

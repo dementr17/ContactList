@@ -27,11 +27,6 @@ class TabBarViewController: UITabBarController {
             } else if let personVC = viewController as? ListPersonViewController {
                 personVC.persons = personsModel
             }
-//        if let contactList = segue.destination as? ContactListViewController {
-//            contactList.infoList = personsModel
-//        } else if let listPerson = segue.destination as? ListPersonViewController {
-//            listPerson.persons = personsModel
-//        }
         }
     }
 }
