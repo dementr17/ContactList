@@ -18,16 +18,16 @@ class TabBarViewController: UITabBarController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBarControllers = segue.destination as? UITabBarController else { return }
-        guard let viewControllers = tabBarControllers.viewControllers else { return }
-        
-        for viewController in viewControllers {
-            if let contactVC = viewController as? ContactListViewController {
-                contactVC.infoList = personsModel
-            } else if let personVC = viewController as? ListPersonViewController {
-                personVC.persons = personsModel
-            }
-        }
+//        guard let tabBarControllers = segue.destination as? UITabBarController else { return }
+//        guard let viewControllers = tabBarControllers.viewControllers else { return }
+//
+//        for viewController in viewControllers {
+//            if let contactVC = viewController as? ContactListViewController {
+//                contactVC.infoList = personsModel
+//            } else if let personVC = viewController as? ListPersonViewController {
+//                personVC.persons = personsModel
+//            }
+//        }
     }
 }
 
